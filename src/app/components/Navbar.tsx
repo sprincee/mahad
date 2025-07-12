@@ -7,13 +7,22 @@ import { Menu, X } from 'lucide-react'
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isAboutSection, setIsAboutSection] = useState(false)
+  const [hideNavbar, setHideNavbar] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       const aboutSection = document.getElementById('about')
       if (aboutSection) {
         const rect = aboutSection.getBoundingClientRect()
-        setIsAboutSection(rect.top <= 100 && rect.bottom >= 100)
+        const isInAbout = rect.top <= 100 && rect.bottom >= 100
+        setIsAboutSection(isInAbout)
+        
+        // Hide navbar when entering About section on mobile
+        if (window.innerWidth < 768) { // md breakpoint
+          setHideNavbar(rect.top <= 50)
+        } else {
+          setHideNavbar(false)
+        }
       }
     }
 
@@ -63,7 +72,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4 sm:px-6 sm:py-6 md:px-8 lg:px-12 xl:px-16">
+      <nav className={`fixed top-0 left-0 right-0 z-50 px-4 py-4 sm:px-6 sm:py-6 md:px-8 lg:px-12 xl:px-16 transition-all duration-300 ${hideNavbar ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
         <div className="flex justify-between items-start">
           {/* Logo/Name Section */}
           <motion.a

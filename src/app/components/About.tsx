@@ -47,7 +47,7 @@ const About: React.FC = () => {
         }}
       />
 
-      <div className="relative z-10 flex min-h-screen items-center px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+      <div className="relative z-10 flex min-h-screen items-center px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-24 md:py-0">
         <motion.div
           className="w-full max-w-6xl mx-auto"
           variants={containerVariants}
