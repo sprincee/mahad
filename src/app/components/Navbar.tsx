@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 sm:px-8 md:px-12 lg:px-16">
+      <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4 sm:px-6 sm:py-6 md:px-8 lg:px-12 xl:px-16">
         <div className="flex justify-between items-start">
           {/* Logo/Name Section */}
           <motion.a
@@ -77,8 +77,8 @@ const Navbar: React.FC = () => {
             transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
             className={`${isAboutSection ? 'text-gray-900' : 'text-white'} transition-colors duration-300 cursor-pointer`}
           >
-            <h2 className="text-xl sm:text-2xl font-light tracking-tight">Mahad Khan</h2>
-            <p className={`text-sm ${isAboutSection ? 'text-gray-600' : 'text-gray-400'} font-light transition-colors duration-300`}>Designer</p>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-light tracking-tight">Mahad Khan</h2>
+            <p className={`text-xs sm:text-sm ${isAboutSection ? 'text-gray-600' : 'text-gray-400'} font-light transition-colors duration-300`}>Designer</p>
           </motion.a>
 
           {/* Hamburger Menu Button */}
@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X size={28} strokeWidth={1.5} />
+                  <X size={24} strokeWidth={1.5} />
                 </motion.div>
               ) : (
                 <motion.div
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
                   exit={{ rotate: -90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Menu size={28} strokeWidth={1.5} />
+                  <Menu size={24} strokeWidth={1.5} />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -140,9 +140,9 @@ const Navbar: React.FC = () => {
               className="fixed right-0 top-0 h-full w-full sm:w-[400px] md:w-[450px] z-40 bg-gradient-to-br from-gray-900 via-black to-gray-950"
             >
               {/* Menu Content */}
-              <div className="flex flex-col justify-center h-full px-12 sm:px-16">
+              <div className="flex flex-col justify-center h-full px-8 sm:px-12 md:px-16">
                 <nav>
-                  <ul className="space-y-8">
+                  <ul className="space-y-6 sm:space-y-8">
                     {navLinks.map((link, index) => (
                       <motion.li
                         key={link.name}
@@ -159,7 +159,7 @@ const Navbar: React.FC = () => {
                           rel={link.external ? 'noopener noreferrer' : undefined}
                           className="group relative block"
                         >
-                          <span className="text-3xl sm:text-4xl md:text-5xl font-thin text-white hover:text-gray-300 transition-colors duration-300">
+                          <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-thin text-white hover:text-gray-300 transition-colors duration-300">
                             {link.name}
                           </span>
                           <motion.span
@@ -179,7 +179,7 @@ const Navbar: React.FC = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.5 }}
-                  className="mt-20 text-gray-400 text-sm"
+                  className="mt-16 sm:mt-20 text-gray-400 text-xs sm:text-sm"
                 >
                   <p>© 2025 Mahad Khan</p>
                   <p className="mt-2">mahadsuhaibkhan@gmail.com</p>

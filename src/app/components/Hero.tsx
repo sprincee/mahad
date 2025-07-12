@@ -98,15 +98,15 @@ const Hero: React.FC = () => {
           className="text-center max-w-7xl mx-auto"
           variants={itemVariants}
         >
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-thin tracking-tight leading-[0.9] font-sans">
+          <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-thin tracking-tight leading-[0.9] font-sans">
             <span className="text-white/90 block sm:inline">hi, i&apos;m </span>
             <span className="text-white/95 italic inline-block transform hover:scale-105 transition-transform duration-300">
               mahad
             </span>
             <span className="text-white/90">,</span>
-            <br className="hidden sm:block" />
-            <span className="text-white/90">i </span>
-            <span className="inline-block relative h-[1em] w-[200px] sm:w-[280px] md:w-[340px] lg:w-[400px] xl:w-[500px] overflow-hidden align-middle">
+            <br />
+            <span className="text-white/90 block mt-2 sm:mt-0 sm:inline">i </span>
+            <span className="inline-block relative h-[1.2em] w-[140px] xs:w-[180px] sm:w-[240px] md:w-[300px] lg:w-[360px] xl:w-[450px] overflow-hidden align-middle">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={currentWordIndex}

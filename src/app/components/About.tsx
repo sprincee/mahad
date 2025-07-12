@@ -75,11 +75,7 @@ const About: React.FC = () => {
                 </p>
                 <p className="text-lg sm:text-xl font-light text-gray-700 leading-relaxed">
                 When I&apos;m not contemplating running away and starting my life over, I&apos;m out with my camera, capturing life&apos;s moments. 
-                If not that, you&apos;ll find me on adventures with my friends, exploring hidden spots, or just soaking up as much life as I can.
-                </p>
-                <p className="text-lg sm:text-xl font-light text-gray-700 leading-relaxed">
-                Blending my engineering background with my artistic eye, I seek to create digital experiences that actually mean something 
-                -- because I want to be understood, not just seen.
+                If not that, you&apos;ll find me on adventures with my friends or just soaking up as much life as I can.
                 </p>
               </motion.div>
 
