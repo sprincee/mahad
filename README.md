@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# hi, i'm mahad
 
-## Getting Started
+i create things.
 
-First, run the development server:
+sometimes it's code that breathes life into pixels.  
+sometimes it's photographs that freeze time.  
+sometimes it's words that paint pictures.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### currently
+- building elegant solutions at the wills group
+- capturing light through my lens
+- writing stories that matter
+- climbing rocks and brewing the perfect latte
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### find me
+- wandering through [my site](https://mahadkhan.com)
+- pushing pixels on [github](https://github.com/sprincee)
+- sharing moments on [instagram](https://instagram.com/mahadphotos)
+- connecting on [linkedin](https://linkedin.com/in/mahad-skhan)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+*"great things never come from comfort zones"*
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
