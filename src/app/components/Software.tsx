@@ -106,18 +106,18 @@ const Software: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950" />
       
       <div className="relative z-10 flex min-h-screen">
-        {/* Left Column - Fixed */}
+        {/* Left Column - Fixed with better spacing */}
         <motion.div 
-          className="w-full lg:w-[35%] xl:w-[30%] px-8 sm:px-12 lg:px-16 py-12 lg:py-16 lg:fixed lg:h-screen flex flex-col"
+          className="w-full lg:w-[35%] xl:w-[30%] px-6 sm:px-8 lg:px-12 py-8 lg:py-12 lg:fixed lg:h-screen lg:overflow-y-auto"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
         >
-          <div className="max-w-md flex-1 flex flex-col">
+          <div className="h-full flex flex-col">
             {/* Back Button */}
             <motion.a
               href="/"
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 mb-8 group"
+              className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 mb-6 group flex-shrink-0"
               whileHover={{ x: -4 }}
             >
               <ArrowLeft size={20} strokeWidth={1.5} />
@@ -125,23 +125,23 @@ const Software: React.FC = () => {
             </motion.a>
 
             {/* Artistic Header */}
-            <div className="mb-12">
-              <div className="flex items-center gap-3 mb-6">
-                <Code2 size={28} strokeWidth={1} className="text-gray-500" />
-                <Sparkles size={20} strokeWidth={1} className="text-gray-600" />
+            <div className="mb-8 flex-shrink-0">
+              <div className="flex items-center gap-3 mb-4">
+                <Code2 size={24} strokeWidth={1} className="text-gray-500" />
+                <Sparkles size={18} strokeWidth={1} className="text-gray-600" />
               </div>
-              <h1 className="text-4xl sm:text-5xl font-extralight text-white mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl font-extralight text-white mb-4 leading-tight">
                 where code meets <br />
                 <span className="italic">creativity</span>
               </h1>
-              <p className="text-lg font-extralight text-gray-400 leading-relaxed">
+              <p className="text-base font-extralight text-gray-400 leading-relaxed">
               Since getting my first computer at age 5, 
               I&apos;ve been captivated by what&apos;s possible when you combine technology and the arts. This is where my technical and design worlds collide.
               </p>
             </div>
 
-            {/* Navigation */}
-            <nav className="mb-auto">
+            {/* Navigation - with auto spacing */}
+            <nav className="mb-8 flex-grow">
               <ul className="space-y-2">
                 <li>
                   <button
@@ -170,50 +170,51 @@ const Software: React.FC = () => {
               </ul>
             </nav>
 
-            {/* Resume Download - Glowing Blue Button */}
-            <div className="mb-12">
+            {/* Bottom Section - Resume & Social */}
+            <div className="flex-shrink-0 space-y-6">
+              {/* Resume Download */}
               <motion.a
                 href="/resume.pdf"
                 download
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500/20 text-blue-400 border border-blue-500/50 rounded-full hover:bg-blue-500/30 hover:border-blue-400 transition-all duration-300 group"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/20 text-blue-400 border border-blue-500/50 rounded-full hover:bg-blue-500/30 hover:border-blue-400 transition-all duration-300 group text-sm"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 style={{
                   boxShadow: '0 0 20px rgba(59, 130, 246, 0.5), inset 0 0 20px rgba(59, 130, 246, 0.1)'
                 }}
               >
-                <Download size={18} strokeWidth={1.5} />
-                <span className="font-extralight text-sm">Download Resume</span>
+                <Download size={16} strokeWidth={1.5} />
+                <span className="font-extralight">Download Resume</span>
               </motion.a>
-            </div>
 
-            {/* Social Links */}
-            <div className="flex gap-6">
-              <a
-                href="https://github.com/sprincee"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-                aria-label="GitHub"
-              >
-                <Github size={22} strokeWidth={1.5} />
-              </a>
-              <a
-                href="https://linkedin.com/in/mahad-skhan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={22} strokeWidth={1.5} />
-              </a>
-              <a
-                href="mailto:mahadsuhaibkhan@gmail.com"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-                aria-label="Email"
-              >
-                <Mail size={22} strokeWidth={1.5} />
-              </a>
+              {/* Social Links */}
+              <div className="flex gap-5">
+                <a
+                  href="https://github.com/sprincee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  aria-label="GitHub"
+                >
+                  <Github size={20} strokeWidth={1.5} />
+                </a>
+                <a
+                  href="https://linkedin.com/in/mahad-skhan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={20} strokeWidth={1.5} />
+                </a>
+                <a
+                  href="mailto:mahadsuhaibkhan@gmail.com"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  aria-label="Email"
+                >
+                  <Mail size={20} strokeWidth={1.5} />
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -221,7 +222,7 @@ const Software: React.FC = () => {
         {/* Right Column - Scrollable */}
         <div className="w-full lg:w-[65%] xl:w-[70%] lg:ml-[35%] xl:ml-[30%]">
           <motion.div
-            className="px-8 sm:px-12 lg:px-16 xl:px-24 py-12 lg:py-16"
+            className="px-6 sm:px-8 lg:px-12 xl:px-20 py-8 lg:py-12"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -229,7 +230,7 @@ const Software: React.FC = () => {
             {/* Experience Section */}
             {activeSection === 'experience' && (
               <motion.div variants={itemVariants}>
-                <div className="space-y-12">
+                <div className="space-y-10">
                   {experience.map((job, index) => (
                     <motion.div
                       key={index}
@@ -242,25 +243,25 @@ const Software: React.FC = () => {
                         {job.period}
                       </div>
                       <div>
-                        <h4 className="text-2xl font-extralight text-white mb-1">
+                        <h4 className="text-xl sm:text-2xl font-extralight text-white mb-1">
                           {job.title}
                         </h4>
                         {job.subtitle && (
-                          <h5 className="text-lg font-extralight text-gray-300 mb-1">
+                          <h5 className="text-base sm:text-lg font-extralight text-gray-300 mb-1">
                             {job.subtitle}
                           </h5>
                         )}
-                        <h5 className="text-lg font-extralight text-gray-400 mb-3">
+                        <h5 className="text-base sm:text-lg font-extralight text-gray-400 mb-2">
                           {job.company}
                         </h5>
                         <p className="text-gray-300 font-extralight leading-relaxed mb-3 text-sm">
                           {job.description}
                         </p>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5">
                           {job.tech.map((tech) => (
                             <span
                               key={tech}
-                              className="text-xs text-gray-400 border border-gray-800 px-2.5 py-1 rounded-full font-extralight"
+                              className="text-xs text-gray-400 border border-gray-800 px-2 py-0.5 rounded-full font-extralight"
                             >
                               {tech}
                             </span>
@@ -276,7 +277,7 @@ const Software: React.FC = () => {
             {/* Projects Section */}
             {activeSection === 'projects' && (
               <motion.div variants={itemVariants}>
-                <div className="space-y-12">
+                <div className="space-y-10">
                   {projects.map((project, index) => (
                     <motion.div
                       key={index}
@@ -290,8 +291,8 @@ const Software: React.FC = () => {
                         {project.date}
                       </div>
                       <div>
-                        <div className="flex items-start justify-between mb-3">
-                          <h4 className="text-2xl font-extralight text-white">
+                        <div className="flex items-start justify-between mb-2">
+                          <h4 className="text-xl sm:text-2xl font-extralight text-white">
                             {project.title}
                           </h4>
                           <div className="flex gap-3">
@@ -320,11 +321,11 @@ const Software: React.FC = () => {
                         <p className="text-gray-300 font-extralight leading-relaxed mb-3 text-sm">
                           {project.description}
                         </p>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5">
                           {project.tech.map((tech) => (
                             <span
                               key={tech}
-                              className="text-xs text-gray-400 border border-gray-800 px-2.5 py-1 rounded-full font-extralight"
+                              className="text-xs text-gray-400 border border-gray-800 px-2 py-0.5 rounded-full font-extralight"
                             >
                               {tech}
                             </span>

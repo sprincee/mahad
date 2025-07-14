@@ -97,18 +97,18 @@ const Photography: React.FC = () => {
       />
 
       <div className="relative z-10 flex min-h-screen">
-        {/* Left Column - Fixed */}
+        {/* Left Column - Fixed with better spacing */}
         <motion.div 
-          className="w-full lg:w-[40%] xl:w-[35%] px-8 sm:px-12 lg:px-16 py-12 lg:py-16 lg:fixed lg:h-screen flex flex-col"
+          className="w-full lg:w-[40%] xl:w-[35%] px-6 sm:px-8 lg:px-12 py-8 lg:py-12 lg:fixed lg:h-screen lg:overflow-y-auto"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
         >
-          <div className="max-w-md flex-1 flex flex-col">
+          <div className="h-full flex flex-col">
             {/* Back Button */}
             <motion.a
               href="/"
-              className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 mb-8 group"
+              className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 mb-6 group flex-shrink-0"
               whileHover={{ x: -4 }}
             >
               <ArrowLeft size={20} strokeWidth={1.5} />
@@ -116,32 +116,32 @@ const Photography: React.FC = () => {
             </motion.a>
 
             {/* Artistic Header */}
-            <div className="mb-12">
-              <div className="flex items-center gap-3 mb-6">
-                <Camera size={28} strokeWidth={1} className="text-gray-400" />
-                <Sparkles size={20} strokeWidth={1} className="text-gray-300" />
+            <div className="mb-8 flex-shrink-0">
+              <div className="flex items-center gap-3 mb-4">
+                <Camera size={24} strokeWidth={1} className="text-gray-400" />
+                <Sparkles size={18} strokeWidth={1} className="text-gray-300" />
               </div>
-              <h1 className="text-4xl sm:text-5xl font-extralight text-gray-900 mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl font-extralight text-gray-900 mb-4 leading-tight">
                 capturing <br />
                 <span className="italic">moments</span> & <br />
                 <span className="text-gray-600">memories</span>
               </h1>
-              <p className="text-lg font-extralight text-gray-600 leading-relaxed mb-8">
+              <p className="text-base font-extralight text-gray-600 leading-relaxed">
               My late father loved capturing the beauty in everyday moments with his Canon EOS 50D. 
               Now, with my own camera, I&apos;m continuing what he started -- finding the extraordinary hiding in the mundane.
               </p>
             </div>
 
-            {/* CTA Section */}
-            <div className="space-y-6 mb-auto">
+            {/* CTA Section - with auto spacing */}
+            <div className="space-y-4 mb-8 flex-grow">
               <motion.div 
                 className="flex items-center gap-3"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                <MessageCircle size={20} strokeWidth={1.5} className="text-gray-400" />
-                <p className="text-gray-700 font-extralight">Feel free to book me!</p>
+                <MessageCircle size={18} strokeWidth={1.5} className="text-gray-400" />
+                <p className="text-gray-700 font-extralight text-sm">Feel free to book me!</p>
               </motion.div>
               
               <motion.div 
@@ -150,8 +150,8 @@ const Photography: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                <Instagram size={20} strokeWidth={1.5} className="text-gray-400" />
-                <p className="text-gray-700 font-extralight">DM for pricing!</p>
+                <Instagram size={18} strokeWidth={1.5} className="text-gray-400" />
+                <p className="text-gray-700 font-extralight text-sm">DM for pricing!</p>
               </motion.div>
               
               <motion.div 
@@ -160,23 +160,23 @@ const Photography: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 }}
               >
-                <Camera size={20} strokeWidth={1.5} className="text-gray-400" />
-                <p className="text-gray-700 font-extralight">Let me capture your next big thing!</p>
+                <Camera size={18} strokeWidth={1.5} className="text-gray-400" />
+                <p className="text-gray-700 font-extralight text-sm">Let me capture your next big thing!</p>
               </motion.div>
             </div>
 
-            {/* Instagram Link */}
-            <div className="mt-12">
+            {/* Instagram Link - Bottom Section */}
+            <div className="flex-shrink-0 pb-4">
               <motion.a
                 href="https://instagram.com/mahadphotos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-gray-900 border border-gray-300 rounded-full hover:from-purple-500/30 hover:to-pink-500/30 hover:border-gray-400 transition-all duration-300 group"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-gray-900 border border-gray-300 rounded-full hover:from-purple-500/30 hover:to-pink-500/30 hover:border-gray-400 transition-all duration-300 group text-sm"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Instagram size={18} strokeWidth={1.5} />
-                <span className="font-extralight text-sm">@mahadphotos</span>
+                <Instagram size={16} strokeWidth={1.5} />
+                <span className="font-extralight">@mahadphotos</span>
               </motion.a>
             </div>
           </div>
