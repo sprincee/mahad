@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
             <span className="text-white/90">,</span>
             <br />
             <span className="text-white/90 block mt-2 sm:mt-0 sm:inline">i </span>
-            <span className="inline-block relative h-[1.2em] w-[140px] xs:w-[180px] sm:w-[240px] md:w-[300px] lg:w-[360px] xl:w-[450px] overflow-hidden align-middle">
+            <span className="inline-block relative min-w-[120px] w-fit overflow-hidden align-middle h-[1.2em] transition-all duration-300 ease-in-out">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={currentWordIndex}
@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
                   initial="enter"
                   animate="center"
                   exit="exit"
-                  className="absolute inset-0 text-white font-bold"
+                  className="inline-block text-white font-bold"
                 >
                   {words[currentWordIndex]}
                 </motion.span>
@@ -154,12 +154,12 @@ const Hero: React.FC = () => {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
-        
+
         .font-thin {
           font-weight: 200;
           letter-spacing: -0.02em;
         }
-        
+
         .font-bold {
           font-weight: 700;
           letter-spacing: -0.02em;
