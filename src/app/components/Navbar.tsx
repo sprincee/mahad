@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
         setIsAboutSection(isInAbout)
         
         // Hide navbar when entering About section on mobile
-        if (window.innerWidth < 768) { // md breakpoint
+        if (window.innerWidth <= 1024) { // md breakpoint
           setHideNavbar(rect.top <= 50)
         } else {
           setHideNavbar(false)
