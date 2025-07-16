@@ -13,8 +13,8 @@ const Software: React.FC = () => {
       title: 'Software Engineering Intern',
       subtitle: 'Fullstack + Infrastructure',
       company: 'The Wills Group',
-      description: 'Architecting full-stack React.js dashboards, performing TLS certificate provisioning, building ML pipelines with 1TB of enterprise data, and establishing testing protocols with 85% coverage.',
-      tech: ['React.js', 'TypeScript', 'Pandas', 'spaCy', 'GitHub Actions', 'Jest']
+      description: 'Architecting full-stack React.js dashboards, performing TLS certificate provisioning, aiding in building ML pipelines with 1TB of enterprise data, and establishing testing protocols with 85% coverage.',
+      tech: ['React.js', 'TypeScript', 'Pandas', 'GitHub Actions', 'ESLint']
     },
     {
       period: 'JUN 2024 — AUG 2024',
@@ -30,7 +30,7 @@ const Software: React.FC = () => {
       subtitle: 'DevOps Automation',
       company: 'The Wills Group',
       description: 'Resolved 40+ hardware/software tickets, automated PC imaging using Microsoft Deployment Toolkit, reducing device setup time by 50% across regional sites.',
-      tech: ['PowerShell', 'MDT', 'Jira', 'Windows Imaging']
+      tech: ['PowerShell', 'MDT', 'Windows Imaging']
     },
     {
       period: 'JUN 2022 — SEP 2022',
