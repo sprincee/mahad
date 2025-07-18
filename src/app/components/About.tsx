@@ -81,7 +81,7 @@ const About: React.FC = () => {
 
               <motion.div variants={itemVariants}>
                 <a
-                  href="https://linkedin.com/in/mahadkhan"
+                  href="https://linkedin.com/in/mahad-skhan"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-gray-900 hover:text-gray-600 transition-colors duration-300 group"
