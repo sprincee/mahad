@@ -49,7 +49,7 @@ const Software: React.FC = () => {
       description: 'Full-stack legislative platform that tracks bills and congressional actions, enabling users to stay informed on vital U.S. legislation.',
       tech: ['React.js', 'Next.js', 'TypeScript', 'Supabase', 'Congress.gov API'],
       github: 'https://github.com/sprincee/poliview',
-      live: 'https://poliview.vercel.app'
+      live: 'https://politcalview.vercel.app/'
     },
     {
       title: 'Flame',
@@ -57,7 +57,7 @@ const Software: React.FC = () => {
       description: 'AI-powered thumbnail generator utilizing OpenAI GPT-4o, handling user-auth and bulk image generation at scale with 35+ peak users.',
       tech: ['React.js', 'TypeScript', 'Firebase', 'OpenAI DALL-E', 'Tailwind'],
       github: 'https://github.com/sprincee/flame',
-      live: 'https://flame-ai.vercel.app'
+      live: 'https://flame3.vercel.app/'
     },
     {
       title: 'QuranQuest',
