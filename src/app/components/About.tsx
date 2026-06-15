@@ -5,13 +5,20 @@ import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 
 const About: React.FC = () => {
-  const skills = [
-    'React / Next.js',
-    'TypeScript',
-    'Node.js',
-    'Python',
-    'UI/UX Design',
-    'Photography'
+  const interests = [
+    'Photography',
+    'Writing Fiction',
+    'Calisthenics',
+    'Anime & Manga',
+    'Gaming',
+    'Building Software',
+  ]
+
+  const now = [
+    'Studying for the AWS SAA',
+    'Planning a trip to Canada',
+    'Making my own cologne',
+    'Watching One Piece',
   ]
 
   const containerVariants = {
@@ -20,9 +27,9 @@ const About: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   }
 
   const itemVariants = {
@@ -40,7 +47,7 @@ const About: React.FC = () => {
   return (
     <section id="about" className="relative min-h-screen w-full overflow-hidden bg-white">
       {/* Subtle Pattern Overlay */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -66,16 +73,19 @@ const About: React.FC = () => {
               </motion.div>
 
               <motion.div variants={itemVariants} className="space-y-6">
-                <p className="text-lg sm:text-xl font-light text-gray-700 leading-relaxed">
-                <strong>I&apos;m a 22-year old creative from La Plata, Maryland, passionate about bringing ideas to life.</strong> 
+                <p className="text-lg sm:text-xl font-light text-gray-900 leading-relaxed">
+                  I&apos;m a 23-year-old Pakistani-American from La Plata, Maryland, and I&apos;m{' '}
+                  <em>passionate</em> about bringing ideas to life — whatever form that takes.
                 </p>
                 <p className="text-lg sm:text-xl font-light text-gray-700 leading-relaxed">
-                From making silly YouTube videos for my family or painstakingly recreating my entire house in Minecraft, 
-                I&apos;ve always been drawn to creating something out of nothing.
+                  From cardboard sculptures as a kid to recreating my entire house in Minecraft,
+                  writing short stories to building software — I&apos;ve always believed you can
+                  make something remarkable out of anything. Paper becomes a story. Code becomes
+                  a product. Trash becomes art.
                 </p>
                 <p className="text-lg sm:text-xl font-light text-gray-700 leading-relaxed">
-                When I&apos;m not contemplating running away and starting my life over, I&apos;m out with my camera, capturing life&apos;s moments. 
-                If not that, you&apos;ll find me on adventures with my friends or just soaking up as much life as I can.
+                  When I&apos;m not at my desk, I&apos;m usually out with my camera or on some
+                  adventure with my friends.
                 </p>
               </motion.div>
 
@@ -87,66 +97,82 @@ const About: React.FC = () => {
                   className="inline-flex items-center gap-2 text-gray-900 hover:text-gray-600 transition-colors duration-300 group"
                 >
                   <span className="text-lg font-light">Let&apos;s build</span>
-                  <ArrowUpRight 
-                    size={20} 
-                    strokeWidth={1.5} 
+                  <ArrowUpRight
+                    size={20}
+                    strokeWidth={1.5}
                     className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
                   />
                 </a>
               </motion.div>
             </div>
 
-            {/* Right Column - Skills & Info */}
-            <div className="space-y-12">
+            {/* Right Column */}
+            <div className="space-y-8">
+              {/* Interests */}
               <motion.div variants={itemVariants}>
-                <h3 className="text-2xl font-light text-gray-900 mb-6">Skills & Expertise</h3>
+                <h3 className="text-2xl font-light text-gray-900 mb-6">Interests</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {skills.map((skill, index) => (
+                  {interests.map((interest, index) => (
                     <motion.div
-                      key={skill}
+                      key={interest}
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.05, duration: 0.4 }}
                       viewport={{ once: true }}
                       className="text-gray-600 font-light"
                     >
-                      {skill}
+                      {interest}
                     </motion.div>
                   ))}
                 </div>
               </motion.div>
 
+              {/* Now */}
               <motion.div variants={itemVariants}>
-                <h3 className="text-2xl font-light text-gray-900 mb-6">Currently</h3>
-                <div className="space-y-4 text-gray-600 font-light">
-                  <p>Building innovative web experiences</p>
-                  <p>Exploring computational photography</p>
-                  <p>Writing about design & technology</p>
+                <h3 className="text-2xl font-light text-gray-900 mb-6">Currently...</h3>
+                <div className="space-y-4">
+                  {now.map((item, index) => (
+                    <motion.p
+                      key={index}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05, duration: 0.4 }}
+                      viewport={{ once: true }}
+                      className="text-gray-600 font-light"
+                    >
+                      {item}
+                    </motion.p>
+                  ))}
                 </div>
+                <span className="inline-flex items-center gap-1.5 text-xs text-gray-400 font-light mt-6">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block" />
+                  Last updated June 2026
+                </span>
               </motion.div>
 
+              {/* Connect */}
               <motion.div variants={itemVariants}>
                 <h3 className="text-2xl font-light text-gray-900 mb-6">Connect with me =&#41;</h3>
-                <div className="space-y-2">
-                  <a 
-                    href="mailto:hello@mahadkhan.com" 
-                    className="block text-gray-600 font-light hover:text-gray-900 transition-colors duration-300"
+                <div className="flex gap-6">
+                  <a
+                    href="mailto:mahadsuhaibkhan@gmail.com"
+                    className="text-gray-600 font-light hover:text-gray-900 transition-colors duration-300"
                   >
-                    mahadsuhaibkhan@gmail.com
+                    Email
                   </a>
-                  <a 
-                    href="https://github.com/sprincee" 
+                  <a
+                    href="https://github.com/sprincee"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-gray-600 font-light hover:text-gray-900 transition-colors duration-300"
+                    className="text-gray-600 font-light hover:text-gray-900 transition-colors duration-300"
                   >
                     GitHub
                   </a>
-                  <a 
-                    href="https://www.linkedin.com/in/mahad-skhan/" 
+                  <a
+                    href="https://www.linkedin.com/in/mahad-skhan/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-gray-600 font-light hover:text-gray-900 transition-colors duration-300"
+                    className="text-gray-600 font-light hover:text-gray-900 transition-colors duration-300"
                   >
                     LinkedIn
                   </a>
