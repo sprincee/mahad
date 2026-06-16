@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import React, { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -45,9 +46,15 @@ interface Chapter {
 
 // ─── GA helper ────────────────────────────────────────────────────────────────
 
+declare global {
+  interface Window {
+    gtag?: (command: string, event: string, params: Record<string, string | boolean | number>) => void
+  }
+}
+
 function track(name: string, params: Record<string, string | boolean | number>) {
-  if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-    ;(window as any).gtag('event', name, params)
+  if (typeof window !== 'undefined' && typeof (window).gtag === 'function') {
+    ;(window).gtag('event', name, params)
   }
 }
 
@@ -372,7 +379,7 @@ const chapters: Chapter[] = [
     headline: (
       <>
         The next<br />
-        chapter hasn't<br />
+        chapter hasn&apos;t<br />
         <em style={{ fontStyle: 'italic', color: '#333' }}>started yet.</em>
       </>
     ),
@@ -543,7 +550,7 @@ const RecruiterView: React.FC<{ onExit: () => void }> = ({ onExit }) => {
           <div>
             <h1 className="text-4xl font-extralight text-white/90 tracking-tight">Mahad S. Khan</h1>
             <p className="text-sm font-light text-white/30 mt-1">
-              BS Information Science, UMD '26 &nbsp;·&nbsp; MS Information Systems (in progress) &nbsp;·&nbsp; Targeting SRE
+              BS Information Science, UMD &apos;26 &nbsp;·&nbsp; MS Information Systems (in progress) &nbsp;·&nbsp; Targeting SRE
             </p>
           </div>
           <p className="text-sm font-light text-white/40 leading-relaxed max-w-2xl">
@@ -667,11 +674,6 @@ const Software_v2: React.FC = () => {
     setPhase('recruiter')
   }
 
-  const exitRecruiter = () => {
-    track('recruiter_mode_toggle', { new_state: false })
-    setPhase(phase === 'recruiter' ? 'hero' : phase)
-  }
-
   if (phase === 'recruiter') {
     return (
       <AnimatePresence mode="wait">
@@ -692,10 +694,10 @@ const Software_v2: React.FC = () => {
 
       {/* Top bar */}
       <div className="relative z-10 flex items-center justify-between px-8 py-5 border-b border-white/[0.04]">
-        <a href="/" className="flex items-center gap-2 text-white/20 hover:text-white/50 transition-colors group">
+        <Link href="/" className="flex items-center gap-2 text-white/20 hover:text-white/50 transition-colors group">
           <ArrowLeft size={14} strokeWidth={1.5} />
           <span className="text-xs font-light tracking-wider">home</span>
-        </a>
+        </Link>
         <span className="text-xs font-light tracking-widest text-white/15 uppercase">mahad.studio</span>
         <button
           onClick={enterRecruiter}
@@ -734,13 +736,13 @@ const Software_v2: React.FC = () => {
                   </p>
                   <h1 className="font-extralight leading-[0.94] tracking-tight text-white/90"
                     style={{ fontSize: 'clamp(48px, 6vw, 72px)' }}>
-                    I've been<br />
+                    I&apos;ve been<br />
                     taking things<br />
                     <strong className="font-black text-white">apart</strong> since{' '}
                     <em className="italic font-extralight text-white/35">five.</em>
                   </h1>
                   <p className="text-sm font-light text-white/25 leading-relaxed max-w-xs mt-6">
-                    Still haven't stopped. This is the log — every build, every role, every moment something clicked. In order.
+                    Still haven&apos;t stopped. This is the log — every build, every role, every moment something clicked. In order.
                   </p>
                   <div className="flex items-center gap-6 mt-10">
                     <button
@@ -783,7 +785,7 @@ const Software_v2: React.FC = () => {
                     key={ch.num}
                     onClick={() => { setChapterIndex(i); setPhase('chapters') }}
                     className={`text-left px-3 py-2.5 rounded-md mb-1 group transition-colors ${
-                      i === chapterIndex && phase === 'chapters' ? 'bg-white/[0.04]' : 'hover:bg-white/[0.03]'
+                      i === chapterIndex ? 'bg-white/[0.04]' : 'hover:bg-white/[0.03]'
                     } ${ch.title === "What's Next" ? 'opacity-30' : ''}`}
                   >
                     <p className="text-[9px] text-white/15 font-light tracking-wider mb-0.5">{ch.num}</p>
