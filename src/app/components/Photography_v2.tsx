@@ -23,10 +23,10 @@ interface Photo {
 // ─── Photo Manifest ────────────────────────────────────────────────────────────
 const PHOTOS: Photo[] = [
   {
-    id: 'home-1',
+    id: 'graduation-2',
     src: `${CDN}/home/riyaFinalPhoto-16.jpg`,
     alt: 'Portrait — Riya',
-    category: 'portraits',
+    category: 'graduation',
     width: 1600,
     height: 2400,
   },
@@ -39,6 +39,70 @@ const PHOTOS: Photo[] = [
     height: 2400,
   },
   {
+    id: 'portraits-2',
+    src: `${CDN}/portraits/AnishaGradPhoto-3.jpg`,
+    alt: 'Portrait',
+    category: 'portraits',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'portraits-3',
+    src: `${CDN}/portraits/extra-1.jpg`,
+    alt: 'Portrait',
+    category: 'portraits',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'portraits-4',
+    src: `${CDN}/portraits/extra-2.jpg`,
+    alt: 'Portrait',
+    category: 'portraits',
+    width: 758,
+    height: 1350,
+  },
+  {
+    id: 'portraits-5',
+    src: `${CDN}/portraits/NSA_Photo (11 of 17).jpg`,
+    alt: 'NSA Portrait',
+    category: 'portraits',
+    width: 3368,
+    height: 6000,
+  },
+  {
+    id: 'portraits-6',
+    src: `${CDN}/portraits/NSA_Photo (5 of 17).jpg`,
+    alt: 'NSA Portrait',
+    category: 'portraits',
+    width: 3368,
+    height: 6000,
+  },
+  {
+    id: 'portraits-7',
+    src: `${CDN}/portraits/NSA_Photo (6 of 17).jpg`,
+    alt: 'NSA Portrait',
+    category: 'portraits',
+    width: 4000,
+    height: 6000,
+  },
+  {
+    id: 'portraits-8',
+    src: `${CDN}/portraits/NSA_Photo (7 of 17).jpg`,
+    alt: 'NSA Portrait',
+    category: 'portraits',
+    width: 3368,
+    height: 6000,
+  },
+  {
+    id: 'portraits-9',
+    src: `${CDN}/portraits/Sister (15 of 17).jpg`,
+    alt: 'NSA Portrait',
+    category: 'portraits',
+    width: 3368,
+    height: 6000,
+  },
+  {
     id: 'graduation-1',
     src: `${CDN}/graduation/DavidGradPhoto-16.jpg`,
     alt: 'David — Graduation',
@@ -47,8 +111,288 @@ const PHOTOS: Photo[] = [
     height: 2400,
   },
   {
+    id: 'graduation-3',
+    src: `${CDN}/graduation/ArushiGrad-45.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-4',
+    src: `${CDN}/graduation/ArushiGrad-50.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 845,
+    height: 1350,
+  },
+  {
+    id: 'graduation-5',
+    src: `${CDN}/graduation/EvelynGradPhoto-10.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-6',
+    src: `${CDN}/graduation/grad-01.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-7',
+    src: `${CDN}/graduation/Haider and Friends (4 of 72).jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 3368,
+    height: 6000,
+  },
+  {
+    id: 'graduation-8',
+    src: `${CDN}/graduation/Haider and Friends (45 of 72).jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 3368,
+    height: 6000,
+  },
+  {
+    id: 'graduation-9',
+    src: `${CDN}/graduation/Haider and Friends (48 of 72).jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 3368,
+    height: 6000,
+  },
+  {
+    id: 'graduation-10',
+    src: `${CDN}/graduation/IbrahimGradPhoto-10.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-11',
+    src: `${CDN}/graduation/Jay_RawEdit (16 of 28).jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 758,
+    height: 1350,
+  },
+  {
+    id: 'graduation-12',
+    src: `${CDN}/graduation/JennaGrad-29.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-13',
+    src: `${CDN}/graduation/MayaAndFriendsGradPhoto-104.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-14',
+    src: `${CDN}/graduation/MayaAndFriendsGradPhoto-134.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-15',
+    src: `${CDN}/graduation/MayaAndFriendsGradPhoto-138.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-16',
+    src: `${CDN}/graduation/MayaAndFriendsGradPhoto-179.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-17',
+    src: `${CDN}/graduation/MayaAndFriendsGradPhoto-22.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 973,
+    height: 1350,
+  },
+  {
+    id: 'graduation-18',
+    src: `${CDN}/graduation/MayaAndFriendsGradPhoto-260.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 929,
+    height: 1350,
+  },
+  {
+    id: 'graduation-19',
+    src: `${CDN}/graduation/MayaAndFriendsGradPhoto-50.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-20',
+    src: `${CDN}/graduation/MayaAndFriendsGradPhoto-76.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-21',
+    src: `${CDN}/graduation/NoorGradPhoto-34.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-22',
+    src: `${CDN}/graduation/RamyaGrad-101.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-23',
+    src: `${CDN}/graduation/riyaFinalPhoto-15.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-24',
+    src: `${CDN}/graduation/riyaFinalPhoto-7.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-25',
+    src: `${CDN}/graduation/SelenaGradPhoto-20.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'graduation-26',
+    src: `${CDN}/graduation/tuff-1.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1137,
+  },
+  {
+    id: 'graduation-27',
+    src: `${CDN}/graduation/ZaraGradPhoto-79.jpg`,
+    alt: 'Graduation',
+    category: 'graduation',
+    width: 900,
+    height: 1350,
+  },
+  {
     id: 'concerts-1',
     src: `${CDN}/concerts/Moonfall-16.jpg`,
+    alt: 'Moonfall Concert',
+    category: 'concerts',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'concerts-2',
+    src: `${CDN}/concerts/Moonfall-15.jpg`,
+    alt: 'Moonfall Concert',
+    category: 'concerts',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'concerts-3',
+    src: `${CDN}/concerts/Moonfall-2.jpg`,
+    alt: 'Moonfall Concert',
+    category: 'concerts',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'concerts-4',
+    src: `${CDN}/concerts/Moonfall-21.jpg`,
+    alt: 'Moonfall Concert',
+    category: 'concerts',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'concerts-5',
+    src: `${CDN}/concerts/Moonfall-29.jpg`,
+    alt: 'Moonfall Concert',
+    category: 'concerts',
+    width: 1080,
+    height: 720,
+  },
+  {
+    id: 'concerts-6',
+    src: `${CDN}/concerts/Moonfall-45.jpg`,
+    alt: 'Moonfall Concert',
+    category: 'concerts',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'concerts-7',
+    src: `${CDN}/concerts/Moonfall-47.jpg`,
+    alt: 'Moonfall Concert',
+    category: 'concerts',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'concerts-8',
+    src: `${CDN}/concerts/Moonfall-48.jpg`,
+    alt: 'Moonfall Concert',
+    category: 'concerts',
+    width: 1080,
+    height: 720,
+  },
+  {
+    id: 'concerts-9',
+    src: `${CDN}/concerts/Moonfall-5.jpg`,
+    alt: 'Moonfall Concert',
+    category: 'concerts',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'concerts-10',
+    src: `${CDN}/concerts/Moonfall-51.jpg`,
+    alt: 'Moonfall Concert',
+    category: 'concerts',
+    width: 1080,
+    height: 720,
+  },
+  {
+    id: 'concerts-11',
+    src: `${CDN}/concerts/Moonfall-8.jpg`,
     alt: 'Moonfall Concert',
     category: 'concerts',
     width: 900,
@@ -61,6 +405,22 @@ const PHOTOS: Photo[] = [
     category: 'bw',
     width: 1600,
     height: 2400,
+  },
+  {
+    id: 'bw-2',
+    src: `${CDN}/bw/bw-07.jpg`,
+    alt: 'B&W Series',
+    category: 'bw',
+    width: 900,
+    height: 1350,
+  },
+  {
+    id: 'bw-3',
+    src: `${CDN}/bw/bw-08.jpg`,
+    alt: 'B&W Series',
+    category: 'bw',
+    width: 900,
+    height: 1350,
   },
 ]
 
@@ -90,10 +450,12 @@ interface SidebarContentProps {
   activeCategory: Category
   setActiveCategory: (c: Category) => void
   onBookClick: () => void
+  onPricingClick: () => void
+  onTestimonialsClick: () => void
   onClose?: () => void
 }
 
-function SidebarContent({ activeCategory, setActiveCategory, onBookClick, onClose }: SidebarContentProps) {
+function SidebarContent({ activeCategory, setActiveCategory, onBookClick, onPricingClick, onTestimonialsClick, onClose }: SidebarContentProps) {
   return (
     <div className="flex flex-col h-full">
       {/* Back */}
@@ -115,8 +477,14 @@ function SidebarContent({ activeCategory, setActiveCategory, onBookClick, onClos
         </h1>
         <p className="text-sm text-gray-700 leading-relaxed max-w-xs" style={{ fontFamily: SERIF, fontWeight: 400, fontSize: '0.95rem' }}>
           My late father loved capturing the beauty in everyday moments with his Canon EOS 50D.
-          Now, with my own camera, I&apos;m continuing what he started — finding the
-          extraordinary hiding in the mundane.
+          Now, with my own camera, I&apos;m continuing what he started. But don&apos;t take my word for it —{' '}
+          <button
+            onClick={() => { onTestimonialsClick(); onClose?.() }}
+            className="underline underline-offset-2 text-gray-900 hover:text-gray-600 transition-colors duration-200 cursor-pointer"
+            style={{ fontFamily: SERIF, fontSize: '0.95rem' }}
+          >
+            hear from those I&apos;ve worked with.
+          </button>
         </p>
       </div>
 
@@ -139,6 +507,17 @@ function SidebarContent({ activeCategory, setActiveCategory, onBookClick, onClos
           ))}
 
           <li className="my-2 border-t border-gray-200" />
+
+          {/* Pricing */}
+          <li>
+            <button
+              onClick={() => { onPricingClick(); onClose?.() }}
+              className="text-left tracking-widest uppercase transition-all duration-200 py-[5px] text-gray-600 hover:text-gray-800 inline-block"
+              style={{ fontFamily: SERIF, fontWeight: 400, fontSize: '0.8rem', letterSpacing: '0.12em' }}
+            >
+              Pricing
+            </button>
+          </li>
 
           {/* Book a Shoot */}
           <li>
@@ -174,7 +553,7 @@ function SidebarContent({ activeCategory, setActiveCategory, onBookClick, onClos
           <a href="https://instagram.com/mahadphotos" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
             <Instagram size={15} strokeWidth={1.5} />
           </a>
-          <a href="https://linkedin.com/in/mahadkhan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+          <a href="https://linkedin.com/in/mahad-skhan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
             <Linkedin size={15} strokeWidth={1.5} />
           </a>
         </div>
@@ -186,6 +565,132 @@ function SidebarContent({ activeCategory, setActiveCategory, onBookClick, onClos
         </p>
       </div>
     </div>
+  )
+}
+
+// ─── Testimonials Data ─────────────────────────────────────────────────────────
+// Add new testimonials here — they'll appear in the modal automatically.
+const TESTIMONIALS = [
+  {
+    id: 't1',
+    quote: "Mahad made me feel so comfortable during the shoot. The photos came out better than I could have imagined.",
+    name: "Riya S.",
+    context: "Graduation Portraits, 2024",
+  },
+  {
+    id: 't2',
+    quote: "Super professional and creative. He captured moments I didn't even know were happening.",
+    name: "David K.",
+    context: "Graduation Portraits, 2024",
+  },
+]
+
+// ─── Pricing Modal ─────────────────────────────────────────────────────────────
+function PricingModal({ onClose }: { onClose: () => void }) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = '' }
+  }, [])
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [onClose])
+
+  const tiers = [
+    { label: 'Individual',              price: '$60',            detail: 'per session' },
+    { label: 'Groups',                  price: '$40',            detail: 'per person'  },
+    { label: 'Large Groups (10+)',      price: '$25',            detail: 'per person'  },
+    { label: 'Student Orgs / Events',   price: 'Contact me',     detail: ''            },
+  ]
+
+  return (
+    <motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
+      <motion.div
+        className="relative w-full max-w-sm bg-white z-10 p-8 sm:p-10"
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 24 }}
+        transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
+        <button onClick={onClose} className="absolute top-5 right-5 text-gray-600 hover:text-gray-900 transition-colors" aria-label="Close">
+          <X size={18} strokeWidth={1.5} />
+        </button>
+
+        <h2 className="text-2xl mb-1 text-gray-900" style={{ fontFamily: SERIF, fontWeight: 500 }}>Pricing</h2>
+        <p className="text-xs text-gray-600 tracking-wide mb-8" style={{ fontFamily: SERIF }}>
+          All sessions include edited digital deliverables.
+        </p>
+
+        <div className="space-y-0">
+          {tiers.map((tier, i) => (
+            <div key={i} className="flex items-baseline justify-between py-4 border-b border-gray-100 last:border-0">
+              <span className="text-sm text-gray-800" style={{ fontFamily: SERIF }}>{tier.label}</span>
+              <span className="text-right">
+                <span className="text-sm font-medium text-gray-900" style={{ fontFamily: SERIF }}>{tier.price}</span>
+                {tier.detail && (
+                  <span className="text-xs text-gray-500 ml-1" style={{ fontFamily: SERIF }}>{tier.detail}</span>
+                )}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-xs text-gray-500 mt-6 leading-relaxed" style={{ fontFamily: SERIF }}>
+          Pricing may vary based on location, duration, and deliverables. Reach out via Book a Shoot for a custom quote.
+        </p>
+      </motion.div>
+    </motion.div>
+  )
+}
+
+// ─── Testimonials Modal ────────────────────────────────────────────────────────
+function TestimonialsModal({ onClose }: { onClose: () => void }) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = '' }
+  }, [])
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [onClose])
+
+  return (
+    <motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
+      <motion.div
+        className="relative w-full max-w-md bg-white z-10 p-8 sm:p-10 max-h-[80vh] overflow-y-auto"
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 24 }}
+        transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
+        <button onClick={onClose} className="absolute top-5 right-5 text-gray-600 hover:text-gray-900 transition-colors" aria-label="Close">
+          <X size={18} strokeWidth={1.5} />
+        </button>
+
+        <h2 className="text-2xl mb-1 text-gray-900" style={{ fontFamily: SERIF, fontWeight: 500 }}>Kind Words</h2>
+        <p className="text-xs text-gray-600 tracking-wide mb-8" style={{ fontFamily: SERIF }}>
+          From clients I&apos;ve had the pleasure of working with.
+        </p>
+
+        <div className="space-y-8">
+          {TESTIMONIALS.map((t) => (
+            <div key={t.id} className="border-l-2 border-gray-100 pl-4">
+              <p className="text-sm text-gray-800 leading-relaxed mb-3" style={{ fontFamily: SERIF, fontStyle: 'italic' }}>
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <p className="text-xs text-gray-900 tracking-wide" style={{ fontFamily: SERIF, fontWeight: 500 }}>{t.name}</p>
+              <p className="text-xs text-gray-500" style={{ fontFamily: SERIF }}>{t.context}</p>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+    </motion.div>
   )
 }
 
@@ -454,6 +959,8 @@ const PhotographyV2: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<Category>('all')
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const [contactOpen, setContactOpen] = useState(false)
+  const [pricingOpen, setPricingOpen] = useState(false)
+  const [testimonialsOpen, setTestimonialsOpen] = useState(false)
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [showBackToTop, setShowBackToTop] = useState(false)
   const gridRef = useRef<HTMLDivElement>(null)
@@ -550,6 +1057,8 @@ const PhotographyV2: React.FC = () => {
                   activeCategory={activeCategory}
                   setActiveCategory={setActiveCategory}
                   onBookClick={() => setContactOpen(true)}
+                  onPricingClick={() => setPricingOpen(true)}
+                  onTestimonialsClick={() => setTestimonialsOpen(true)}
                   onClose={() => setDrawerOpen(false)}
                 />
               </motion.div>
@@ -570,6 +1079,8 @@ const PhotographyV2: React.FC = () => {
               activeCategory={activeCategory}
               setActiveCategory={setActiveCategory}
               onBookClick={() => setContactOpen(true)}
+              onPricingClick={() => setPricingOpen(true)}
+              onTestimonialsClick={() => setTestimonialsOpen(true)}
             />
           </motion.div>
 
@@ -634,6 +1145,16 @@ const PhotographyV2: React.FC = () => {
             <ArrowUp size={16} strokeWidth={1.5} />
           </motion.button>
         )}
+      </AnimatePresence>
+
+      {/* ── Pricing Modal ─────────────────────────────────────────── */}
+      <AnimatePresence>
+        {pricingOpen && <PricingModal onClose={() => setPricingOpen(false)} />}
+      </AnimatePresence>
+
+      {/* ── Testimonials Modal ────────────────────────────────────── */}
+      <AnimatePresence>
+        {testimonialsOpen && <TestimonialsModal onClose={() => setTestimonialsOpen(false)} />}
       </AnimatePresence>
 
       {/* ── Contact Modal ─────────────────────────────────────────── */}
