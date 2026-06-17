@@ -573,15 +573,39 @@ function SidebarContent({ activeCategory, setActiveCategory, onBookClick, onPric
 const TESTIMONIALS = [
   {
     id: 't1',
-    quote: "Mahad made me feel so comfortable during the shoot. The photos came out better than I could have imagined.",
-    name: "Riya S.",
-    context: "Graduation Portraits, 2024",
+    quote: "Mahad made the awkward situation of being a model into a super fun hangout that produced AMAZING photos for my graduation! Would recommend.",
+    name: "Jaeden C.",
+    context: "Graduation Portraits, 2025",
   },
   {
     id: 't2',
-    quote: "Super professional and creative. He captured moments I didn't even know were happening.",
-    name: "David K.",
-    context: "Graduation Portraits, 2024",
+    quote: "Mahad has a fresh and creative approach to his shoots, always willing to try out new ideas. He'll go above and beyond to fufill your vision & will work with you to ensure that vision is met.",
+    name: "Riya P.",
+    context: "Graduation Portraits, 2026",
+  },
+  {
+    id: 't3',
+    quote: "Graduated undergrad and couldn't be happier with my photos. Mahad is definitely seeing me next year when I graduate from my masters program.",
+    name: "David B.",
+    context: "Graduation Portraits, 2026",
+  },
+  {
+    id: 't4',
+    quote: "Best photographer ever!! I got my pictures super fast and we were able to recreate all the inspo I wanted :) Helped me every step of the way & even with my heels.",
+    name: "Selena N.",
+    context: "Graduation Portraits, 2026",
+  },
+  {
+    id: 't5',
+    quote: "I had an amazing experience with Mahad for my grad photos! I came in with a bunch of inspo pics, and he brought my vision to life. Highly recommend!",
+    name: "Arushi G.",
+    context: "Graduation Portraits, 2026",
+  },
+  {
+    id: 't6',
+    quote: "Great experience! Open to new ideas but also gave me guidance when I wasn't sure about things. Very detail oriented, which made the pics turn out great!",
+    name: "Sophie B.",
+    context: "Graduation Portraits, 2026",
   },
 ]
 
