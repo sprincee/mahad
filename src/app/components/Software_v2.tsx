@@ -15,7 +15,7 @@ import {
 
 // Shared resume button style used in hero + chapter sidebar
 const resumeButtonClass =
-  'inline-flex items-center gap-2 px-4 py-2 bg-white/[0.06] hover:bg-white/[0.10] border border-white/[0.08] rounded-full text-[10px] font-light text-white/60 hover:text-white/90 transition-all tracking-wider'
+  'inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 rounded-full text-[10px] font-light text-blue-400 hover:text-blue-300 transition-all tracking-wider'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -71,8 +71,8 @@ const entries: JourneyEntry[] = [
     sortDate: new Date('2008-01-01').getTime(),
     title: 'First computer',
     category: 'personal',
-    description: 'Got my first computer at 5. Spent most of it asking "what happens if I do this?" — and then doing it. Never really recovered from that.',
-    reflection: "Every career decision since has been some version of the same question: Can it do this? What if I try?",
+    description: 'Got my first computer at 5. Spent most of it just tinkering around, asking "What does this button do?".',
+    reflection: "Thankfully, there was no red 'EXPLODE' button. Would've ended terribly.",
   },
   {
     id: 'scratch',
@@ -80,8 +80,8 @@ const entries: JourneyEntry[] = [
     sortDate: new Date('2016-01-01').getTime(),
     title: 'Learned Scratch',
     category: 'personal',
-    description: 'At 13, discovered Scratch. Drag-and-drop blocks that actually did something. First time I understood that you could give a computer instructions and it would just... follow them.',
-    reflection: 'Scratch taught me that programming could just be fun. You make something, it works, and that is enough.',
+    description: 'At 13, I discovered Scratch. Drag-and-drop blocks, that tell a computer to do something. Cool, right?',
+    reflection: 'Scratch taught me that programming was fun. I made funny animations for myself and my friends.',
   },
   {
     id: 'minecraft-team',
@@ -89,9 +89,9 @@ const entries: JourneyEntry[] = [
     sortDate: new Date('2017-06-01').getTime(),
     title: 'Joined a Minecraft Plugin Developer team',
     category: 'personal',
-    description: "At 14, joined the dev team for a Minecraft server with 1,000+ concurrent players. I was reading source code, shipping features, watching real people use stuff I built. That was new.",
+    description: "At 14, I joined the dev team for a Minecraft server with 1,000+ concurrent players. I was reading source code, shipping features, watching real people use stuff I built. That was new.",
     tech: ['Java', 'Spigot API'],
-    reflection: "Finally, I understood what prod meant. A scary experience at first, but I had mentors that I could rely on.",
+    reflection: "Learned to never push to 'prod' on a Friday.",
   },
   {
     id: 'duels-plugin',
@@ -99,7 +99,7 @@ const entries: JourneyEntry[] = [
     sortDate: new Date('2019-06-01').getTime(),
     title: 'Built a Duels Plugin',
     category: 'project',
-    description: "At 16, designed and shipped a 1v1 matchmaking system for the same server. Players could challenge each other, the system managed sessions, and it had to handle concurrent matches without stepping on itself.",
+    description: "At 16, I designed and shipped a 1v1 matchmaking system for the same server. Players could challenge each other, the system managed sessions, and it had to handle concurrent matches without stepping on itself.",
     tech: ['Java', 'Spigot API'],
     outcomes: ['Live on a 1,000+ player server', 'Custom stateful matchmaking from scratch'],
     reflection: "I was dealing with concurrency problems before I knew the word.",
@@ -110,7 +110,7 @@ const entries: JourneyEntry[] = [
     sortDate: new Date('2020-01-01').getTime(),
     title: 'Learned Python',
     category: 'personal',
-    description: 'At 17, picked up Python and built the first things that felt like real software: scrapers and small tools, mostly. It was fun.',
+    description: 'At 17, I picked up Python and became a victim of the Dunning-Kruger effect. Thought I was the best building scrapers and small tools. It was fun.',
     tech: ['Python'],
     reflection: 'Python quickly became my favorite language. Python > Java, everyday. ',
   },
@@ -136,7 +136,7 @@ const entries: JourneyEntry[] = [
     description: 'Triaged 40+ tickets across 250 employees. Automated Windows device provisioning with MDT and golden images so setup stopped being a manual, three-hour process.',
     tech: ['PowerShell', 'MDT', 'Windows Imaging', 'Jira'],
     outcomes: ['Setup time cut 50% across three regional sites', 'Downtime reduced 35%', 'L2/L3 escalation rate dropped'],
-    reflection: "That summer taught me one thing: if you're doing it twice, automate it.",
+    reflection: "That summer taught me one thing: if you're doing it twice, automate it. Or at the very least, try to.",
   },
   {
     id: 'enchantmentplus',
@@ -148,7 +148,7 @@ const entries: JourneyEntry[] = [
     tech: ['Java', 'Forge API', 'Spigot API', 'Blockbench', 'GIMP'],
     outcomes: ['Production deploy: 100+ concurrent connections', 'Custom progression system built on studying game mechanics'],
     github: 'https://github.com/sprincee',
-    reflection: "You can't safely modify a system you don't understand.",
+    reflection: "Looking back, I should make more Minecraft mods.",
   },
   {
     id: 'quranquest',
@@ -160,7 +160,7 @@ const entries: JourneyEntry[] = [
     tech: ['HTML', 'CSS', 'JavaScript', 'Flask', 'Python'],
     outcomes: ['80+ students across 2 mosque deployments'],
     github: 'https://github.com/sprincee/quranquest',
-    reflection: "Building for a community is different. These weren't users, I knew most of them. First time I had seen the impact I could make with code.",
+    reflection: "Building for a community is different. I'll never forget the smile of a little boy extracting value from something I made.",
   },
   {
     id: 'wills-sre',
@@ -172,7 +172,7 @@ const entries: JourneyEntry[] = [
     description: "Deployed Meraki hardware across 8 retail sites. Built IoT provisioning automation for 45+ BOHA devices and finished 50% ahead of schedule.",
     tech: ['Meraki Portal', 'PowerShell', 'IoT', 'Networking'],
     outcomes: ['Staging time cut 40% across 8 sites', 'IoT provisioning delivered 50% ahead of schedule', 'Onboarding time down 25% from runbook documentation'],
-    reflection: "A well-written runbook is the backbone of any technology or process.",
+    reflection: "A well-written playbook is the backbone of any technology or process.",
   },
   {
     id: 'flame',
@@ -215,7 +215,7 @@ const entries: JourneyEntry[] = [
       'Config drift reduced 80% via automated TLS provisioning',
       'PCI-DSS compliance across POS fleet',
     ],
-    reflection: 'Another not-so-fancy reflection, but always have a back-up plan. You cannot guarantee that your website will not break mid-meeting.',
+    reflection: 'Another not-so-fancy reflection, but always have a back-up plan. You cannot guarantee that your website will not break mid-presentation.',
   },
   {
     id: 'umd-consultant',
@@ -224,10 +224,10 @@ const entries: JourneyEntry[] = [
     title: 'Technical Consultant',
     subtitle: 'University of Maryland',
     category: 'work',
-    description: 'Led a HubSpot CRM implementation for a career consulting client. Migrated 2,200+ contact records using Python automation and built the process documentation for what comes after you leave.',
+    description: 'Led a HubSpot CRM implementation for a career consulting client. Migrated 2,200+ contact records using Python automation and built the process documentation for what comes after I leave.',
     tech: ['HubSpot', 'Python', 'CRM', 'Data Migration'],
     outcomes: ['2,200+ records migrated', 'Full outreach tracking infrastructure delivered with documentation'],
-    reflection: "Data migrations aren't just technical. You're changing how people work.",
+    reflection: "Working in Tech is more than just picking the fanciest tech-stack.",
   },
   {
     id: 'supercrowd',
@@ -264,7 +264,7 @@ const entries: JourneyEntry[] = [
     subtitle: 'The Wills Group',
     category: 'work',
     isCurrent: true,
-    description: 'On-site infrastructure work across enterprise retail environments. Configuring firewalls, routing, and VLANs. Contributing to a virtualization project that will shrink back-office server rack footprint. Coordinating lifecycle management for 500+ phones and end-user devices.',
+    description: 'On-site infrastructure work across enterprise retail environments. Configuring firewalls and routing. Contributing to a virtualization project that will transform the organization. Coordinating lifecycle management for 500+ phones and end-user devices.',
     tech: ['Networking', 'Firewall Configuration', 'VLANs', 'Virtualization', 'Device Lifecycle Management'],
     outcomes: [
       'VLAN segmentation and firewall hardening across retail sites',
@@ -301,39 +301,36 @@ const chapters: Chapter[] = [
         was just <em style={{ fontStyle: 'italic', color: '#444' }}>curiosity.</em>
       </>
     ),
-    body: "A first computer. Scratch blocks. A Minecraft server with real players and real stakes. The foundation wasn't school — it was curiosity.",
+    body: "My first computer. Learning Scratch. Yelling in Skype calls about Minecraft and code. Pretty fun time, if you ask me.",
     entryIds: ['first-computer', 'scratch', 'minecraft-team', 'duels-plugin', 'python-start'],
   },
   {
     num: '02',
-    title: 'First Code',
+    title: 'Baby Steps',
     years: '2022 — 2023',
     ghostYear: '2022',
     headline: (
       <>
         First real job.<br />
         First real data.<br />
-        First <strong style={{ fontWeight: 700 }}>failure</strong> that taught me something.
+        First <strong style={{ fontWeight: 700 }}>failures</strong> that taught me something.
       </>
     ),
-    body: "Two internships. Two projects. The things I built started mattering to people I hadn't met.",
+    body: "Two internships. Two projects. Would I go back and change a few things? Yeah. Did I learn a lot? Definitely.",
     entryIds: ['remax', 'wills-it', 'enchantmentplus', 'quranquest'],
   },
   {
     num: '03',
-    title: 'Going Pro',
+    title: 'Leveling up',
     years: '2024 — 2025',
     ghostYear: '2024',
     headline: (
-      <>
-        I stopped<br />
-        calling myself<br />
-        a student.{' '}
-        <strong style={{ fontWeight: 700 }}>Nobody</strong>{' '}
-        <em style={{ fontStyle: 'italic', color: '#444' }}>argued.</em>
-      </>
-    ),
-    body: 'Site reliability. ML pipelines. Legislative platforms. AI tools. Each one a harder problem than the last.',
+  <>
+    Things started<br />
+    getting <em style={{ fontStyle: 'italic', color: '#333' }}>interesting.</em>
+  </>
+  ),
+    body: 'Gathered XP with every side and main quest.',
     entryIds: ['wills-sre', 'flame', 'poliview', 'wills-swe', 'umd-consultant'],
   },
   {
@@ -348,7 +345,7 @@ const chapters: Chapter[] = [
         <em style={{ fontStyle: 'italic', color: '#444' }}>written.</em>
       </>
     ),
-    body: 'Graduated. Building infrastructure. Shipping systems. Looking for the next hard thing.',
+    body: 'Graduated! Building infrastructure! Writing code! Looking for the next fun thing!',
     entryIds: ['supercrowd', 'bs-graduation', 'wills-infra'],
   },
   {
@@ -363,7 +360,7 @@ const chapters: Chapter[] = [
         <em style={{ fontStyle: 'italic', color: '#333' }}>started yet.</em>
       </>
     ),
-    body: 'MS graduation. The first SRE role. Whatever comes after that.',
+    body: 'Getting my MS degree. My first-job post grad. Whatever comes after that.',
     entryIds: ['ms-graduation'],
   },
 ]
@@ -554,7 +551,7 @@ const RecruiterView: React.FC<{ onExit: () => void }> = ({ onExit }) => {
             </h1>
           </div>
           <a
-            href="/resume.pdf"
+            href="/api/resume"
             download
             onClick={() => track('resume_download', { referrer: 'recruiter_mode', recruiter_mode: true })}
             className="inline-flex items-center gap-2.5 px-6 py-3 bg-white text-black text-xs font-light tracking-widest uppercase rounded-full hover:bg-white/90 transition-colors self-start sm:self-auto flex-shrink-0"
@@ -613,11 +610,6 @@ const RecruiterView: React.FC<{ onExit: () => void }> = ({ onExit }) => {
                   {e.subtitle && (
                     <p className="text-[11px] font-light text-white/55 mt-0.5">{e.subtitle}</p>
                   )}
-                  {e.outcomes && e.outcomes[0] && (
-                    <p className="text-[11px] font-light text-white/50 mt-1.5 leading-relaxed">
-                      {e.outcomes[0]}
-                    </p>
-                  )}
                 </div>
               ))}
             </div>
@@ -652,11 +644,6 @@ const RecruiterView: React.FC<{ onExit: () => void }> = ({ onExit }) => {
                       )}
                     </div>
                   </div>
-                  {e.outcomes && e.outcomes[0] && (
-                    <p className="text-[11px] font-light text-white/50 mt-1.5 leading-relaxed">
-                      {e.outcomes[0]}
-                    </p>
-                  )}
                 </div>
               ))}
             </div>
@@ -719,7 +706,7 @@ const Software_v2: React.FC = () => {
       <div className="relative z-10 flex items-center justify-between px-5 sm:px-8 py-4 sm:py-5 border-b border-white/[0.04]">
         <Link href="/" className="flex items-center gap-2 text-white/50 hover:text-white/70 transition-colors">
           <ArrowLeft size={14} strokeWidth={1.5} />
-          <span className="text-xs font-light tracking-wider">home</span>
+          <span className="text-xs font-light tracking-wider">back to home</span>
         </Link>
         <button
           onClick={enterRecruiter}
@@ -773,12 +760,12 @@ const Software_v2: React.FC = () => {
                   style={{ fontSize: 'clamp(40px, 6vw, 72px)' }}
                 >
                   I&apos;ve been<br />
-                  taking things<br />
-                  <strong className="font-black text-white">apart</strong> since{' '}
+                  curious about<br />
+                  <strong className="font-black text-white">Tech</strong> since I was{' '}
                   <em className="italic font-extralight text-white/50">five.</em>
                 </h1>
                 <p className="text-sm font-light text-white/55 leading-relaxed max-w-xs mt-5 sm:mt-6">
-                  Still haven&apos;t stopped. This is the log — every build, every role, every moment something clicked. In order.
+                  Still am. This is everything I&apos;ve built, learned, and worked on since then.
                 </p>
                 <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
                   <button
@@ -791,7 +778,7 @@ const Software_v2: React.FC = () => {
                   {/* Resume + socials inline on mobile — hidden on desktop (shown in right column) */}
                   <div className="flex lg:hidden items-center gap-4">
                     <a
-                      href="/resume.pdf"
+                      href="/api/resume"
                       download
                       onClick={() => track('resume_download', { referrer: 'hero', recruiter_mode: false })}
                       className={resumeButtonClass}
@@ -831,7 +818,7 @@ const Software_v2: React.FC = () => {
               {/* Social + resume in negative space (desktop only) — sits between D and chapter border */}
               <div className="hidden lg:flex flex-col items-center gap-4 mt-auto pt-8">
                 <a
-                  href="/resume.pdf"
+                  href="/api/resume"
                   download
                   onClick={() => track('resume_download', { referrer: 'hero', recruiter_mode: false })}
                   className={resumeButtonClass}
@@ -894,7 +881,7 @@ const Software_v2: React.FC = () => {
                 {/* Resume + social — desktop sidebar bottom */}
                 <div className="hidden lg:flex flex-col items-center gap-4 mt-auto pt-6">
                   <a
-                    href="/resume.pdf"
+                    href="/api/resume"
                     download
                     onClick={() => track('resume_download', { referrer: 'chapter_sidebar', recruiter_mode: false })}
                     className={resumeButtonClass}

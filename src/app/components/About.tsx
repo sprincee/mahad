@@ -79,7 +79,7 @@ const About: React.FC = () => {
                 </p>
                 <p className="text-lg sm:text-xl font-light text-gray-700 leading-relaxed">
                   From cardboard sculptures as a kid to recreating my entire house in Minecraft,
-                  writing short stories to building software — I&apos;ve always believed you can
+                  writing short stories to building software. I&apos;ve always believed you can
                   make something remarkable out of anything. Paper becomes a story. Code becomes
                   a product. Trash becomes art.
                 </p>

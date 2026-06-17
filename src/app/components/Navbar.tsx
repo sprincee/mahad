@@ -16,9 +16,9 @@ const Navbar: React.FC = () => {
         const rect = aboutSection.getBoundingClientRect()
         const isInAbout = rect.top <= 100 && rect.bottom >= 100
         setIsAboutSection(isInAbout)
-        
+
         // Hide navbar when entering About section on mobile
-        if (window.innerWidth <= 1024) { // md breakpoint
+        if (window.innerWidth <= 1024) {
           setHideNavbar(rect.top <= 50)
         } else {
           setHideNavbar(false)
@@ -27,16 +27,15 @@ const Navbar: React.FC = () => {
     }
 
     window.addEventListener('scroll', handleScroll)
-    handleScroll() // Check initial position
-    
+    handleScroll()
+
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const navLinks = [
-    { name: 'Software Engineering', href: '/software', external: false },
+    { name: 'Journey in Tech', href: '/software', external: false },
     { name: 'Photography', href: '/photography', external: false },
-    { name: 'Writing', href: 'https://medium.com/@petrichor2', external: true },
-    { name: 'About', href: '#about', external: false }
+    { name: 'About', href: '#about', external: false },
   ]
 
   const menuVariants = {
@@ -45,17 +44,17 @@ const Navbar: React.FC = () => {
       x: '100%',
       transition: {
         duration: 0.3,
-        ease: easeInOut
-      }
+        ease: easeInOut,
+      },
     },
     open: {
       opacity: 1,
       x: 0,
       transition: {
         duration: 0.3,
-        ease: easeInOut
-      }
-    }
+        ease: easeInOut,
+      },
+    },
   }
 
   const linkVariants = {
@@ -72,7 +71,11 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 px-4 py-4 sm:px-6 sm:py-6 md:px-8 lg:px-12 xl:px-16 transition-all duration-300 ${hideNavbar ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 px-4 py-4 sm:px-6 sm:py-6 md:px-8 lg:px-12 xl:px-16 transition-all duration-300 ${
+          hideNavbar ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+        }`}
+      >
         <div className="flex justify-between items-start">
           {/* Logo/Name Section */}
           <motion.a
@@ -87,7 +90,13 @@ const Navbar: React.FC = () => {
             className={`${isAboutSection ? 'text-gray-900' : 'text-white'} transition-colors duration-300 cursor-pointer`}
           >
             <h2 className="text-lg sm:text-xl md:text-2xl font-light tracking-tight">Mahad Khan</h2>
-            <p className={`text-xs sm:text-sm ${isAboutSection ? 'text-gray-600' : 'text-gray-400'} font-light transition-colors duration-300`}>Designer</p>
+            <p
+              className={`text-xs sm:text-sm ${
+                isAboutSection ? 'text-gray-600' : 'text-gray-400'
+              } font-light transition-colors duration-300`}
+            >
+              Designer
+            </p>
           </motion.a>
 
           {/* Hamburger Menu Button */}
@@ -96,7 +105,11 @@ const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99], delay: 0.1 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`relative z-50 p-2 ${isAboutSection ? 'text-gray-900 hover:text-gray-600' : 'text-white hover:text-gray-300'} transition-colors duration-300`}
+            className={`relative z-50 p-2 ${
+              isAboutSection
+                ? 'text-gray-900 hover:text-gray-600'
+                : 'text-white hover:text-gray-300'
+            } transition-colors duration-300`}
             aria-label="Toggle menu"
           >
             <AnimatePresence mode="wait">
@@ -168,7 +181,7 @@ const Navbar: React.FC = () => {
                           rel={link.external ? 'noopener noreferrer' : undefined}
                           className="group relative block"
                         >
-                          <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-thin text-white hover:text-gray-300 transition-colors duration-300">
+                          <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-thin text-white hover:text-gray-300 transition-colors duration-300 whitespace-nowrap">
                             {link.name}
                           </span>
                           <motion.span
@@ -183,15 +196,21 @@ const Navbar: React.FC = () => {
                   </ul>
                 </nav>
 
-                {/* Additional Menu Info */}
+                {/* Footer info */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.5 }}
                   className="mt-16 sm:mt-20 text-gray-400 text-xs sm:text-sm"
                 >
-                  <p>© 2025 Mahad Khan</p>
-                  <p className="mt-2">mahadsuhaibkhan@gmail.com</p>
+                  <p>© 2026 Mahad Khan</p>
+                  <a
+                    href="/architecture"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="mt-2 underline block hover:text-white transition-colors duration-300"
+                  >
+                    Nerdy Stuff
+                  </a>
                 </motion.div>
               </div>
             </motion.div>
