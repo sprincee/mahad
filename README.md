@@ -1,26 +1,35 @@
-# hi, i'm mahad
+# mahad.studio
 
-i create things.
+My corner of the internet. Built to document who I am, what I build, and how I've grown — not a resume with a URL.
 
-sometimes it's code that breathes life into pixels.  
-sometimes it's photographs that freeze time.  
-sometimes it's words that paint pictures.
+## stack
 
----
+- **Framework** — Next.js 15 (App Router)
+- **Styling** — Tailwind CSS 4
+- **Language** — TypeScript
+- **Animations** — Framer Motion
+- **Photos** — AWS S3 + CloudFront
+- **Email** — Resend
+- **Deployment** — Vercel
 
-### currently
-- building elegant solutions at the wills group
-- capturing light through my lens
-- writing stories that matter
-- climbing rocks and brewing the perfect latte
+## what's on it
 
-### find me
-- wandering through [my site](https://mahadkhan.com)
-- pushing pixels on [github](https://github.com/sprincee)
-- sharing moments on [instagram](https://instagram.com/mahadphotos)
-- connecting on [linkedin](https://linkedin.com/in/mahad-skhan)
+- **About** — who I am, what I'm into, what I'm doing now
+- **Photography** — portraits, streetwear, concerts, street
+- **Journey in Tech** — an interactive timeline of how I got here
+- **Software** — projects worth talking about
 
----
+## running locally
 
-*"great things never come from comfort zones"*
+```bash
+git clone https://github.com/sprincee/mahad.git
+cd mahad
+npm install
+npm run dev
+```
 
+Runs on `localhost:3000`. You'll need a `.env.local` for anything touching S3 or Resend.
+
+## find me
+
+[mahad.studio](https://mahad.studio) · [LinkedIn](https://linkedin.com/in/mahad-skhan)
