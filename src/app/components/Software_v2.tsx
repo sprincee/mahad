@@ -36,6 +36,7 @@ interface JourneyEntry {
   live?: string
   isCurrent?: boolean
   isFuture?: boolean
+  featured?: boolean // shown in Recruiter Mode's Projects column
 }
 
 interface Chapter {
@@ -121,9 +122,9 @@ const entries: JourneyEntry[] = [
     title: 'Data Science Intern',
     subtitle: 'ReMax One',
     category: 'work',
-    description: "First real job. Replaced a spreadsheet system with a normalized MySQL database for 175+ client and property records. Built ETL pipelines that actually validated the data going in.",
+    description: "First real job. Replaced a spreadsheet system with a normalized MySQL database for 175+ client and property records. Built Python ETL that actually validated the data going in.",
     tech: ['MySQL', 'Python', 'SQLAlchemy', 'Pandas'],
-    outcomes: ['Query latency down 45%', '95% data integrity validation across all pipelines', 'Replaced spreadsheets nobody trusted with a database people actually used'],
+    outcomes: ['Query latency down 45%', '95% of records passed validation on the first run', 'Replaced spreadsheets nobody trusted with a database people actually used'],
     reflection: "The hard part wasn't the schema. It was convincing people that a database could be trusted more than the spreadsheet they'd been using for three years.",
   },
   {
@@ -166,10 +167,10 @@ const entries: JourneyEntry[] = [
     id: 'wills-sre',
     date: 'Jun — Aug 2024',
     sortDate: new Date('2024-06-01').getTime(),
-    title: 'Site Reliability Intern',
+    title: 'IT Intern',
     subtitle: 'The Wills Group',
     category: 'work',
-    description: "Deployed Meraki hardware across 8 retail sites. Built IoT provisioning automation for 45+ BOHA devices and finished 50% ahead of schedule.",
+    description: "Deployed Meraki hardware across 8 retail sites. Deployed 45+ BOHA devices and finished 50% ahead of schedule.",
     tech: ['Meraki Portal', 'PowerShell', 'IoT', 'Networking'],
     outcomes: ['Staging time cut 40% across 8 sites', 'IoT provisioning delivered 50% ahead of schedule', 'Onboarding time down 25% from runbook documentation'],
     reflection: "A well-written playbook is the backbone of any technology or process.",
@@ -204,13 +205,12 @@ const entries: JourneyEntry[] = [
     id: 'wills-swe',
     date: 'Jun — Aug 2025',
     sortDate: new Date('2025-06-01').getTime(),
-    title: 'Software Solutions Intern',
+    title: 'IT Intern',
     subtitle: 'The Wills Group · Fullstack + Infrastructure',
     category: 'work',
-    description: 'Assisted in planning an ML pipeline ingesting 1TB+ of enterprise data, cutting L1 manual analysis by 40%. Shipped a React dashboard with RBAC for 20+ stakeholders. Automated TLS provisioning across 10+ POS terminals leading to config drift down 80%, PCI-DSS compliance maintained.',
+    description: 'Shipped a React dashboard with RBAC for 20+ stakeholders. Automated TLS provisioning across 10+ POS terminals leading to config drift down 80%, PCI-DSS compliance maintained.',
     tech: ['React.js', 'Node.js', 'TypeScript', 'Python', 'SQLAlchemy', 'GitHub Actions', 'CI/CD'],
     outcomes: [
-      '1TB+ ML pipeline; L1 manual analysis down 40%',
       'Dashboard deployed to 20+ stakeholders',
       'Config drift reduced 80% via automated TLS provisioning',
       'PCI-DSS compliance across POS fleet',
@@ -225,25 +225,57 @@ const entries: JourneyEntry[] = [
     subtitle: 'University of Maryland',
     category: 'work',
     description: 'Led a HubSpot CRM implementation for a career consulting client. Migrated 2,200+ contact records using Python automation and built the process documentation for what comes after I leave.',
-    tech: ['HubSpot', 'Python', 'CRM', 'Data Migration'],
-    outcomes: ['2,200+ records migrated', 'Full outreach tracking infrastructure delivered with documentation'],
+    tech: ['HubSpot', 'Python', 'HubSpot API', 'CRM', 'Data Migration'],
+    outcomes: [
+      '2,200+ records migrated',
+      'Automated recency-based contact rotation via the HubSpot API to keep the client on the free tier',
+      'Full outreach tracking infrastructure delivered with documentation',
+    ],
     reflection: "Working in Tech is more than just picking the fanciest tech-stack.",
   },
   {
     id: 'supercrowd',
-    date: 'Jan — May 2026',
+    date: 'Jan 2026 — Present',
     sortDate: new Date('2026-01-01').getTime(),
     title: 'Technical Consultant',
-    subtitle: 'The Super Crowd, Inc. · Resuming Fall 2026',
+    subtitle: 'The Super Crowd, Inc.',
     category: 'work',
-    description: "Led system design for WorkOS — an AI-assisted Regulation Crowdfunding diligence platform. Designed the full pipeline: SEC EDGAR filing ingestion, LLM-driven impact scoring, founder claim verification, and phased delivery architecture. Ran feasibility analysis across three architecture candidates; the hybrid Hostinger/GitHub Actions stack scored 91.75/100 — outperformed AWS on cost, schedule, and operational risk.",
-    tech: ['Python', 'GitHub Actions', 'MySQL', 'LLM APIs', 'SEC EDGAR API', 'System Design'],
+    isCurrent: true,
+    description: "Led system design for WorkOS — an AI-assisted Regulation Crowdfunding diligence platform. Designed the full pipeline: SEC EDGAR filing ingestion, LLM-driven impact scoring, founder claim verification, and phased delivery architecture. Ran feasibility analysis across three architecture candidates; the hybrid Hostinger/GitHub Actions stack scored 91.75/100 — outperformed AWS on cost, schedule, and operational risk. Now leading data ingestion for the build.",
+    tech: ['Python', 'GitHub Actions', 'MariaDB', 'LLM APIs', 'SEC EDGAR API', 'System Design'],
     outcomes: [
       'Full system design: DFD, ERD, CRUD matrix, physical architecture',
       'Hybrid stack selected via weighted feasibility analysis (91.75/100)',
-      'Pipeline: filing ingestion → LLM scoring → claim verification → report delivery',
+      'Leading end-to-end data ingestion across 587+ Reg CF offerings',
+      '12-table MariaDB schema with 23 integrity checks and versioned migrations',
+      'Client database access secured over TLS with read-only health checks',
     ],
     reflection: "Designing for someone else's methodology means the system has to be auditable, not just accurate. Every decision it makes needs to be traceable.",
+  },
+  {
+    id: 'beyond-the-score',
+    date: 'May 2026',
+    sortDate: new Date('2026-05-01').getTime(),
+    title: 'Beyond the Score',
+    category: 'project',
+    featured: true,
+    description: 'A four-part interactive Tableau story analyzing 2,346 player-match records across 10 League of Legends rank tiers, testing whether vision and communication separate ranks.',
+    tech: ['Tableau', 'Riot Games API', 'Data Visualization'],
+    outcomes: [
+      'Ping volume rises 15x from lowest to highest rank',
+      'High-vision players lead kill participation at every tier',
+    ],
+  },
+  {
+    id: 'claimsight',
+    date: 'May 2026',
+    sortDate: new Date('2026-05-02').getTime(),
+    title: 'ClaimSight',
+    category: 'project',
+    featured: true,
+    description: 'A multimodal fraud detection pipeline pairing an XGBoost claims classifier with a TensorFlow damage-severity model. Flags claim-photo inconsistencies with SHAP explanations for SIU review.',
+    tech: ['Python', 'XGBoost', 'TensorFlow', 'SHAP', 'Docker', 'Streamlit'],
+    outcomes: ['0.923 ROC-AUC', 'Explainable flags routed to SIU investigators'],
   },
   {
     id: 'bs-graduation',
@@ -252,37 +284,50 @@ const entries: JourneyEntry[] = [
     title: 'BS Information Science',
     subtitle: 'University of Maryland, College Park',
     category: 'education',
-    description: 'Graduated from the University of Maryland with a BS in Information Science. Coursework across computer architecture, database design, UX, and data science — and a lot learned outside the classroom.',
-    outcomes: ['Graduated May 2026', 'Concurrent enrollment in MS Information Systems (Plus One Program)'],
+    description: 'Graduated from the University of Maryland with a BS in Information Science. Coursework across infrastructure and architecture, cloud computing, database design, UX, and data science — and a lot learned outside the classroom.',
+    outcomes: ['Graduated May 2026, Magna Cum Laude', 'Concurrent enrollment in MS Information Systems (Plus One Program)'],
     reflection: 'Yay! Class of 2026! GO Terps!!',
   },
   {
     id: 'wills-infra',
-    date: 'Jun 2026 — Present',
+    date: 'Jun — Aug 2026',
     sortDate: new Date('2026-06-01').getTime(),
     title: 'Infrastructure Specialist',
     subtitle: 'The Wills Group',
     category: 'work',
-    isCurrent: true,
-    description: 'On-site infrastructure work across enterprise retail environments. Configuring firewalls and routing. Contributing to a virtualization project that will transform the organization. Coordinating lifecycle management for 500+ phones and end-user devices.',
-    tech: ['Networking', 'Firewall Configuration', 'VLANs', 'Virtualization', 'Device Lifecycle Management'],
+    description: 'On-site infrastructure and security work across enterprise retail environments. Rolled out MFA, led PCI-DSS gap analysis ahead of a QSA review, configured firewalls and routing, and helped migrate the network stack off Meraki.',
+    tech: ['Entra ID', 'Intune', 'PCI-DSS', 'Networking', 'Firewall Configuration', 'VLANs', 'Virtualization'],
     outcomes: [
+      'MFA rolled out to 300+ users, phasing non-compliant devices first',
+      'PCI-DSS Tier 1 gap analysis across 50+ sites ahead of QSA review',
+      'Team migration from Meraki to UniFi cut rack footprint 20%',
       'VLAN segmentation and firewall hardening across retail sites',
-      'Virtualization project in progress — reducing physical rack footprint',
       '500+ devices enrolled in structured lifecycle plan',
     ],
     reflection: 'Good infrastructure is invisible. The goal is a network so well-configured nobody notices it exists.',
   },
   {
+    id: 'terracraft',
+    date: 'Jul 2026',
+    sortDate: new Date('2026-07-01').getTime(),
+    title: 'TerraCraft',
+    category: 'project',
+    featured: true,
+    description: 'A Terraform-style IaC engine in Python. Declarative YAML resource model, plan/apply/destroy lifecycle with read-only planning, SHA-256 fingerprint diffing, and isolated per-stack state, provisioning live Minecraft servers over RCON.',
+    tech: ['Python', 'PyYAML', 'RCON (TCP)', 'IaC'],
+    outcomes: ['Idempotent, deterministic provisioning', 'Drift detection via SHA-256 fingerprinting'],
+    github: 'https://github.com/sprincee/mc-iac',
+  },
+  {
     id: 'ms-graduation',
     date: 'Expected May 2027',
     sortDate: new Date('2027-05-15').getTime(),
-    title: 'MS Information Systems',
+    title: 'MS Information Systems & AI',
     subtitle: 'University of Maryland, College Park',
     category: 'education',
     isFuture: true,
     description: "Currently enrolled in the Plus One accelerated MS program at UMD's Smith School of Business.",
-    outcomes: ['Advanced Data Science, Cloud Computing, Machine Learning'],
+    outcomes: ['Coursework: Data Analysis in Python, AI-Augmented Database Management, Industry Practicum'],
   },
 ]
 
@@ -346,7 +391,7 @@ const chapters: Chapter[] = [
       </>
     ),
     body: 'Graduated! Building infrastructure! Writing code! Looking for the next fun thing!',
-    entryIds: ['supercrowd', 'bs-graduation', 'wills-infra'],
+    entryIds: ['supercrowd', 'beyond-the-score', 'claimsight', 'bs-graduation', 'wills-infra', 'terracraft'],
   },
   {
     num: '05',
@@ -497,17 +542,20 @@ const EntryCard: React.FC<{ entry: JourneyEntry }> = ({ entry }) => {
 
 const RecruiterView: React.FC<{ onExit: () => void }> = ({ onExit }) => {
   const skills = {
-    Languages: ['Python', 'TypeScript', 'JavaScript', 'Java', 'SQL', 'C++', 'Bash'],
-    'Frameworks & Cloud': ['React.js', 'Next.js', 'Node.js', 'Flask', 'Docker', 'AWS', 'GitHub Actions', 'CI/CD'],
-    'Data & Infra': ['Pandas', 'SQLAlchemy', 'Supabase', 'MySQL', 'Linux', 'Git', 'Networking', 'VLANs'],
+    Languages: ['Python', 'SQL', 'Bash', 'R'],
+    'Cloud & Infrastructure': ['AWS', 'Docker', 'Linux', 'GitHub Actions', 'CI/CD', 'Networking'],
+    'Security & Data': ['Entra ID', 'Intune', 'Conditional Access', 'PCI-DSS', 'Tableau', 'Spark', 'dbt', 'PostgreSQL'],
+    Certifications: ['AWS Cloud Practitioner', 'AWS AI Practitioner'],
   }
 
+  // Current role first (matches the resume), then most recent first
   const experienceEntries = [...entries]
     .filter((e) => e.category === 'work' && !e.isFuture)
-    .sort((a, b) => b.sortDate - a.sortDate)
+    .sort((a, b) => Number(!!b.isCurrent) - Number(!!a.isCurrent) || b.sortDate - a.sortDate)
 
+  // Only featured projects appear in Recruiter Mode; the full list stays in the journey
   const projectEntries = [...entries]
-    .filter((e) => e.category === 'project' && !e.isFuture)
+    .filter((e) => e.category === 'project' && e.featured && !e.isFuture)
     .sort((a, b) => b.sortDate - a.sortDate)
 
   return (
@@ -540,7 +588,7 @@ const RecruiterView: React.FC<{ onExit: () => void }> = ({ onExit }) => {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
           <div>
             <p className="text-[10px] uppercase tracking-[0.22em] text-white/30 font-light mb-3">
-              BS Information Science, UMD &apos;26 &nbsp;·&nbsp; MS Information Systems &apos;27 &nbsp;·&nbsp; SRE-focused
+              BS Information Science, UMD &apos;26 &nbsp;·&nbsp; MS Information Systems and AI &apos;27 &nbsp;·&nbsp; SRE-focused
             </p>
             <h1
               className="text-5xl sm:text-6xl font-light text-white/90 leading-none tracking-tight"
